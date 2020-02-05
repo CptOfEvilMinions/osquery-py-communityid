@@ -1,0 +1,2 @@
+osquery==3.0.6
+communityid==1.1
