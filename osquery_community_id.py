@@ -40,11 +40,8 @@ class MyTablePlugin(osquery.TablePlugin):
         context_dict = json.loads(temp)
 
         # Extract values from dictonary
-        src_ip = str()
-        src_port = int()
-        dst_ip = str()
-        dst_port = int()
-        protocol = int()
+        src_ip = dst_ip = str()
+        src_port = dst_port = protocol= int()
         for constraint in context_dict['constraints']:
             if constraint['name'] == 'src_ip' and len(constraint['list']) > 0:
                 src_ip = constraint['list'][0]['expr']
